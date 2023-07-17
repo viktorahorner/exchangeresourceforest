@@ -1,0 +1,18 @@
+# Windows Server feature installation
+Install-WindowsFeature NET-Framework-45-Features, RPC-over-HTTP-proxy, RSAT-Clustering, RSAT-Clustering-CmdInterface, RSAT-Clustering-PowerShell, Web-Mgmt-Console, WAS-Process-Model, Web-Asp-Net45, Web-Basic-Auth, Web-Client-Auth, Web-Digest-Auth, Web-Dir-Browsing, Web-Dyn-Compression, Web-Http-Errors, Web-Http-Logging, Web-Http-Redirect, Web-Http-Tracing, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Metabase, Web-Mgmt-Service, Web-Net-Ext45, Web-Request-Monitor, Web-Server, Web-Stat-Compression, Web-Static-Content, Web-Windows-Auth, Web-WMI, RSAT-ADDS
+Restart-Computer
+# .NET Framework 4.8 installation
+#installation link https://go.microsoft.com/fwlink/?linkid=2088631
+.\ndp48-x86-x64-allos-enu.exe /q /norestart
+Restart-Computer
+#Visual C++ Redistributable Packages for Visual Studio 2013
+#Installation link https://www.microsoft.com/download/details.aspx?id=40784 
+.\vcredist_x64.exe /q /restart
+#Unified Communications Managed API 4.0 Runtime from Official Microsoft Download Center
+#installation link https://www.microsoft.com/en-us/download/confirmation.aspx?id=34992
+#URL rewrite module
+#Installation link https://download.microsoft.com/download/1/2/8/128E2E22-C1B9-44A4-BE2A-5859ED1D4592/rewrite_amd64_en-US.msi
+# Exchange Installation
+.\setup /PrepareAD /organizationName:onpremtocloud /ActiveDirectorySplitPermissions:false /iacceptexchangeserverlicenseterms_diagnosticDataOn
+.\Setup /preparedomain /iacceptexchangeserverlicenseterms_diagnosticDataOn
+.\setup /PrepareSchema /iacceptexchangeserverlicenseterms_diagnosticDataOn
