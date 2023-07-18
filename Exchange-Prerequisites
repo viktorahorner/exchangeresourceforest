@@ -12,7 +12,7 @@ Restart-Computer
 #installation link https://www.microsoft.com/en-us/download/confirmation.aspx?id=34992
 #URL rewrite module
 #Installation link https://download.microsoft.com/download/1/2/8/128E2E22-C1B9-44A4-BE2A-5859ED1D4592/rewrite_amd64_en-US.msi
-# Exchange Installation
+# Exchange Installation link https://www.microsoft.com/en-us/download/details.aspx?id=105180
 .\setup /PrepareAD /organizationName:onpremtocloud /ActiveDirectorySplitPermissions:false /iacceptexchangeserverlicenseterms_diagnosticDataOn
 .\Setup /preparedomain /iacceptexchangeserverlicenseterms_diagnosticDataOn
 .\setup /PrepareSchema /iacceptexchangeserverlicenseterms_diagnosticDataOn
