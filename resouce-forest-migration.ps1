@@ -1,7 +1,7 @@
 Add-PSSnapin *RecipientManagement
 $GLOBAL:sourceforest = 'resources.onpremto.cloud'
 $GLOBAL:sourcedc = 'dc2.resources.onpremto.cloud'
-$GLOBAL:destinationforst = 'users.onpremto.cloud'
+$GLOBAL:destinationforest = 'users.onpremto.cloud'
 $GLOBAL:destinationpath = 'OU=UserAccounts,DC=User,DC=onpremto,DC=cloud'
 $GLOBAL:exportlocation = 'C:\install\'
 $GLOBAL:importlocation = 'C:\install\'
@@ -410,4 +410,3 @@ $groupmembers = Get-DistributionGroupMember -Identity $remotemailbox.SamAccountN
 
 
  }
-
